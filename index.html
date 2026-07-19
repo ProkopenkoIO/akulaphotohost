@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Фотогалерея</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <h1>Фотогалерея</h1>
+    <p class="header-desc">Клікніть на фото, щоб скопіювати HTML-код</p>
+  </div>
+</header>
+
+<main>
+  <div id="gallery" class="gallery"></div>
+  <div id="empty-state" class="empty-state hidden">
+    <p>У галереї поки що немає фото.</p>
+    <p>Додайте зображення в папку <code>images/</code> та вкажіть їх у <code>images.json</code>.</p>
+  </div>
+</main>
+
+<div id="lightbox" class="lightbox hidden">
+  <div class="lightbox-overlay"></div>
+  <div class="lightbox-container">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <div class="lightbox-image-wrap">
+      <img id="lightboxImg" src="" alt="">
+    </div>
+    <div class="lightbox-footer">
+      <div class="lightbox-info">
+        <span id="lightboxName"></span>
+        <span id="lightboxCounter"></span>
+      </div>
+      <div class="lightbox-actions">
+        <button class="btn" id="copyImgBtn" title="Копіювати &lt;img&gt;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          Копіювати &lt;img&gt;
+        </button>
+        <button class="btn btn-outline" id="copyUrlBtn" title="Копіювати URL">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          Копіювати URL
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
